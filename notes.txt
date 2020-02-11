@@ -1,0 +1,29 @@
+BINARY EXPRESSION TREE
+
+
+data type??
+expr = int || expr expr
+
+1 =		val(1);
+
+6 / 3 = 	div(val(6), val(3));
+
+6 / (3 / 2) =	div(val(6), div(val(3), val(2)));
+
+
+
+comes in as an expression
+then we determine what type of expression that is
+then we determine further the building blocks of the expression
+until no more building blocks are left to evaluate <- then we return
+
+2 + 3 * 4
+
+2 + ? (expr = expr + term = factor + expr)
+(2 + )3 * ? (expr = factor + (expr = term = term * factor)
+((2 + )3 * 4) (expr = factor = 2 + (expr = term = (term = factor = 3) * factor = 4)
+
+then we collapse:
+
+(term = factor = 3) * (factor = 4) = 12;
+(expr = expr + term = 2 + 12) = 14;

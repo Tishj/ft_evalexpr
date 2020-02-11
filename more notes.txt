@@ -1,0 +1,37 @@
+input x+y*z, output x+(y * z)
+
+expr: output
+
+term:
+factor:
+X
+
+term:
+
+term * factor:
+
+factor:
+Y
+
+factor:
+Z
+
+
+expression is:
+expr + term |
+expr - term |
+term
+
+term is:
+term * factor |
+term / factor |
+factor
+
+factor is:
+x |
+y |
+(expr)
+expr
+
+
+
